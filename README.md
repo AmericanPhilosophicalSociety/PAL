@@ -1,8 +1,8 @@
 The PAL (People Also Liked) project provides recommendations to researchers at the APS based upon data collected from the request management system Aeon.
 
-PAL is divided into two components: recommendations based upon interest in specified research topics (interestBased) and recommendations based upon a specific collection being requested (similarCollections).
+PAL is divided into two components: recommendations based upon interest in specified research topics (interestBased) and recommendations based upon a specific collection being requested (requestBased).
 
-# Interest-based recommendations
+# Interest Based recommendations
 This component of the project requires a controlled vocabulary of interest topics that users select upon registering in Aeon. Since we would like to quantify the requests in two ways (by number of requests for a particular collection and by number of researchers requesting a particular collection), we have to use two different datasets and then merge them.
 
 The workflow is:
@@ -22,7 +22,7 @@ The final step of the process is to use javascript to determine which research t
 
 The include_interest_based_describe.html file provides an accordioned description of the recommendations for the researchers.
 
-# Collections-based recommendations
+# Request Based recommendations
  This component of the project provides a listing of every collection requested by researchers who have also requested the collection being currently requested by a user. This data only appears on the Aeon request page.
  
 The workflow is:
