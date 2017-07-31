@@ -1,0 +1,42 @@
+<html>
+	<head>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" media="screen" />
+	<style>
+		.center {
+			text-align: center;
+		}
+		small {
+			font-size: 75%;
+		}
+	
+	</style>
+	<script>
+	  $(function() {
+		$( ".accordion" ).accordion({
+		active: false,
+	  collapsible: true,
+	  heightStyle: "content"
+		});
+	  });
+	  </script>
+	</head>
+	<body>
+				<h2 class="center">PAL Recommendations</h2>
+				<p class="center"> (People Also Liked)</p>
+
+				<div class="accordion">
+					
+					<h4>What is this?</h4>
+					<fieldset>
+					<p><strong>Interest-Based Recommendations</strong><br />This list is based on the interests you selected when you registered with our system. </p>
+
+						<p>The list shows which APS collections other people, who chose the same interests as you, requested. The data we're using has had all personally identifiable information removed. We think statistics are great, and we're also big fans of privacy.</p> 
+
+						<p>This list is meant to offer an additional means for exploring the collections. We hope you find it useful. If you have questions or comments, <a href="https://goo.gl/forms/HHYLOq1MoWkDEjTn1" style="color:red" target="new"><strong>please use this form to let us know</strong></a>.</p>
+					</fieldset>
+				</div>
+	</body>
+</html>				

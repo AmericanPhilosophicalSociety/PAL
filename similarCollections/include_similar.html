@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" media="screen" />
+
+<script>
+  $(function() {
+    $( ".accordion" ).accordion({
+	active: false,
+  collapsible: true,
+  heightStyle: "content"
+	});
+  });
+  </script>
+</head>
+
+
+
+
+<body>
+	<div class="accordion">
+	<p>What is this?</p>
+		<fieldset>
+		<p><strong>Request-Based Recommendations</strong><br />
+							This list is generated based on the request that you are making now.</p>
+							
+							<p>People who made a similar request, also looked at the following APS collections. The data we're using has had all personally identifiable information removed. We think statistics are great, and we're also big fans of privacy.</p>
+							
+							<p>This list is meant to offer an additional means for exploring the collections. We hope you find it useful. If you have questions or comments, <a href="https://goo.gl/forms/HHYLOq1MoWkDEjTn1" style="color:red" target="new"><strong>please use this form to let us know</strong></a>.</p>
+		</fieldset>
+	</div>
+	<div class="recheader">
+		<h2>PAL Recommendations</h2>
+		<p>(People Also Liked)</p>
+	</div>
+	<hr />
+	<div class="recintro">Currently, we don't have any recommendations to offer based on your interest in <#PARAM name='CallNumber'>. Our automated recommendations are getting better all the time, though, and hopefully we'll have something soon. Until then, we encourage you to contact our Reference Staff (<a href="mailto:reference@amphilsoc.org">reference@amphilsoc.org</a>), or explore our Subject Guides (<a href="https://amphilsoc.org/library/guides" target="_blank">https://amphilsoc.org/library/guides</a>) if you need help finding items for your research.</div>
+
+   <div class="article">
+   <div class="text short">
+  <ul id="navrec">
+    <div id="collections"></div>
+	</div>
+	<span class="read-more"></span>
+	</div>
+  </ul>
+
+
+</body>
+
+<script>
+$(document).ready(function(){    
+    $(".read-more").click(function(){        
+        var $elem = $(this).parent().find(".text");
+        if($elem.hasClass("short"))
+        {
+            $elem.removeClass("short").addClass("full");        
+        }
+        else
+        {
+            $elem.removeClass("full").addClass("short");        
+        }       
+    });
+});
+</script>
+
+<script>
+  $(document).ready(function() {
+    $.ajax({
+      type: 'GET',
+      url: 'aeonLike_f_Final.xml',
+      dataType: 'xml',
+      success: function(xml) {
+        $(xml).find('group[name="<#PARAM name='CallNumber'>"]').each(function() {
+			$('.recintro').replaceWith('Researchers who requested items from the collection <b><#PARAM name='CallNumber'></b> also requested materials from the following collections:');
+			$('.read-more').append('See more');
+          $(this).find('url').each(function() {
+            $('#collections').append(
+                '<li><a href="http://amphilsoc.org/collections/view?docId=ead/' + $(this).text() + '-ead.xml" target="_blank">' + $(this).next().text()  +'</a> '
+            );
+          })
+        });
+      }
+    });
+  });
+</script>
+</html>
+

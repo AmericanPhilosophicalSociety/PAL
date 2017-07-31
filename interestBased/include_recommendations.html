@@ -1,0 +1,170 @@
+<div id="topic"></div>
+<div id="notopic"></div>
+<script type="text/javascript">
+
+	// Use var message to check for presence of controlled list of topics
+	var message = "<#USER field='ResearchTopics'>";
+	// Use var values to separate topics that are collected in one string
+	var values = "<#USER field='ResearchTopics'>".split(",");
+	
+	var open = "<ul id='navrec'><li class='active'><a href='?Action=10&Form=20&Value=topic";
+	var middle = "'>Because You Are Interested In <strong>";
+	var close = "</strong></a></li></ul>"
+
+			//Determine if user has an interest topic from the controlled list
+			if ((message.indexOf("﻿EA-ColHis") > -1) || (message.indexOf("EA-AmRev") > -1) || (message.indexOf("EA-EarlyNat") > -1) || (message.indexOf("EA-Antebellum") > -1) || (message.indexOf("EA-CivilWar") > -1) || (message.indexOf("EA-NatAm") > -1) || (message.indexOf("EA-Pol") > -1) || (message.indexOf("EA-PaHist") > -1) || (message.indexOf("EA-PhilHist") > -1) || (message.indexOf("EA-Women") > -1) || (message.indexOf("EA-Slavery") > -1) || (message.indexOf("EA-Sci") > -1) || (message.indexOf("EA-Med") > -1) || (message.indexOf("EA-Reform") > -1) || (message.indexOf("EA-Ed") > -1) || (message.indexOf("EA-Bus") > -1) || (message.indexOf("EA-MilHist") > -1) || (message.indexOf("EA-IntHist") > -1) || (message.indexOf("EA-Other") > -1) || (message.indexOf("MA-NatAm") > -1) || (message.indexOf("MA-Pol") > -1) || (message.indexOf("MA-PaHist") > -1) || (message.indexOf("MA-PhilHist") > -1) || (message.indexOf("MA-Women") > -1) || (message.indexOf("MA-Slavery") > -1) || (message.indexOf("MA-Sci") > -1) || (message.indexOf("MA-Med") > -1) || (message.indexOf("MA-Reform") > -1) || (message.indexOf("MA-Ed") > -1) || (message.indexOf("MA-Bus") > -1) || (message.indexOf("MA-MilHist") > -1) || (message.indexOf("MA-IntHist") > -1) || (message.indexOf("MA-Other") > -1) || (message.indexOf("HistSci-18C") > -1) || (message.indexOf("HistSci-19C") > -1) || (message.indexOf("HistSci-20C") > -1) || (message.indexOf("HistSci-Eug") > -1) || (message.indexOf("HistSci-CS") > -1) || (message.indexOf("HistSci-Med") > -1) || (message.indexOf("HistSci-Instr") > -1) || (message.indexOf("HistSci-Exper") > -1) || (message.indexOf("HistSci-SciPol") > -1) || (message.indexOf("HistSci-SciRel") > -1) || (message.indexOf("HistSci-USSci") > -1) || (message.indexOf("HistSci-EuroSci") > -1) || (message.indexOf("HistSci-GlobSci") > -1) || (message.indexOf("HistSci-InstEd") > -1) || (message.indexOf("HistSci-IntHist") > -1) || (message.indexOf("HistSci-Women") > -1) || (message.indexOf("HistSci-Discip") > -1) || (message.indexOf("HistSci-Other") > -1) || (message.indexOf("NatAm-18C") > -1) || (message.indexOf("NatAm-19C") > -1) || (message.indexOf("NatAm-20C") > -1) || (message.indexOf("NatAm-AntHist") > -1) || (message.indexOf("NatAm-Ethno") > -1) || (message.indexOf("NatAm-Ling") > -1) || (message.indexOf("NatAm-AnthRes") > -1) || (message.indexOf("NatAm-CultStud") > -1) || (message.indexOf("NatAm-IndPol") > -1) || (message.indexOf("NatAm-TribGov") > -1) || (message.indexOf("NatAm-Reform") > -1) || (message.indexOf("NatAm-Intercult") > -1) || (message.indexOf("NatAm-TribHist") > -1) || (message.indexOf("NatAm-Tribe") > -1) || (message.indexOf("NatAm-Other") > -1) || (message.indexOf("Lit") > -1) || (message.indexOf("Lit-Other") > -1) || (message.indexOf("ArtHist") > -1) || (message.indexOf("ArtHist-Other") > -1) || (message.indexOf("EuroHist") > -1) || (message.indexOf("EuroHist-Other") > -1))
+
+			for (var i = 0; i < values.length; ++i) {
+					if (values[i]=="﻿EA-ColHis"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Colonial History" + close);}
+					else if (values[i]=="﻿EA-AmRev"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-American Revolution" + close);}
+					else if (values[i]=="EA-EarlyNat"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Early National" + close);}
+					else if (values[i]=="EA-Antebellum"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Antebellum" + close);}
+					else if (values[i]=="EA-CivilWar"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Civil War" + close);}
+					else if (values[i]=="EA-NatAm"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Native American" + close);}
+					else if (values[i]=="EA-Pol"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Politics" + close);}
+					else if (values[i]=="EA-PaHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Pennsylvania History" + close);}
+					else if (values[i]=="EA-PhilHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Philadelphia History" + close);}
+					else if (values[i]=="EA-Women"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Women and Gender" + close);}
+					else if (values[i]=="EA-Slavery"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Slavery" + close);}
+					else if (values[i]=="EA-Sci"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Science" + close);}
+					else if (values[i]=="EA-Med"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Medicine" + close);}
+					else if (values[i]=="EA-Reform"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Reform Movements" + close);}
+					else if (values[i]=="EA-Ed"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Education" + close);}
+					else if (values[i]=="EA-Bus"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Business and Economics" + close);}
+					else if (values[i]=="EA-MilHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Military History" + close);}
+					else if (values[i]=="EA-IntHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Intellectual History" + close);}
+					else if (values[i]=="EA-Other"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Early America-Other" + close);}
+					else if (values[i]=="MA-NatAm"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Native American" + close);}
+					else if (values[i]=="MA-Pol"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Politics" + close);}
+					else if (values[i]=="MA-PaHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Pennsylvania History" + close);}
+					else if (values[i]=="MA-PhilHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Philadelphia History" + close);}
+					else if (values[i]=="MA-Women"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Women and Gender" + close);}
+					else if (values[i]=="MA-Slavery"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Slavery" + close);}
+					else if (values[i]=="MA-Sci"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Science" + close);}
+					else if (values[i]=="MA-Med"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Medicine" + close);}
+					else if (values[i]=="MA-Reform"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Reform Movements" + close);}
+					else if (values[i]=="MA-Ed"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Education" + close);}
+					else if (values[i]=="MA-Bus"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Business and Economics" + close);}
+					else if (values[i]=="MA-MilHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Military History" + close);}
+					else if (values[i]=="MA-IntHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Intellectual History" + close);}
+					else if (values[i]=="MA-Other"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Modern America-Other" + close);}
+					else if (values[i]=="HistSci-18C"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-18th Century" + close);}
+					else if (values[i]=="HistSci-19C"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-19th Century" + close);}
+					else if (values[i]=="HistSci-20C"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-20th Century" + close);}
+					else if (values[i]=="HistSci-Eug"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Eugenics" + close);}
+					else if (values[i]=="HistSci-CS"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Computer Science" + close);}
+					else if (values[i]=="HistSci-Med"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Medicine" + close);}
+					else if (values[i]=="HistSci-Instr"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Instruments" + close);}
+					else if (values[i]=="HistSci-Exper"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Experimentation" + close);}
+					else if (values[i]=="HistSci-SciPol"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Science and Policy" + close);}
+					else if (values[i]=="HistSci-SciRel"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Science and Religion" + close);}
+					else if (values[i]=="HistSci-USSci"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-US Science" + close);}
+					else if (values[i]=="HistSci-EuroSci"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-European Science" + close);}
+					else if (values[i]=="HistSci-GlobSci"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Global Science" + close);}
+					else if (values[i]=="HistSci-InstEd"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Institutions and education" + close);}
+					else if (values[i]=="HistSci-IntHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Intellectual History" + close);}
+					else if (values[i]=="HistSci-Women"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Women and Science" + close);}
+					else if (values[i]=="HistSci-Discip"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Discipline specific research" + close);}
+					else if (values[i]=="HistSci-Other"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "History of Science and Technology-Other" + close);}
+					else if (values[i]=="NatAm-18C"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-18th Century" + close);}
+					else if (values[i]=="NatAm-19C"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-19th Century" + close);}
+					else if (values[i]=="NatAm-20C"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-20th Century" + close);}
+					else if (values[i]=="NatAm-AntHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-History of Anthropology" + close);}
+					else if (values[i]=="NatAm-Ethno"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Ethnohistory" + close);}
+					else if (values[i]=="NatAm-Ling"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Linguistics" + close);}
+					else if (values[i]=="NatAm-AnthRes"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Anthropological research in archives" + close);}
+					else if (values[i]=="NatAm-CultStud"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Cultural Studies" + close);}
+					else if (values[i]=="NatAm-IndPol"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Indian Policy" + close);}
+					else if (values[i]=="NatAm-TribGov"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Tribal governance" + close);}
+					else if (values[i]=="NatAm-Reform"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Reform movements" + close);}
+					else if (values[i]=="NatAm-Intercult"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Intercultural relations" + close);}
+					else if (values[i]=="NatAm-TribHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Tribal histories" + close);}
+					else if (values[i]=="NatAm-Tribe"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Tribe" + close);}
+					else if (values[i]=="NatAm-Other"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Native America and Anthropology-Other" + close);}
+					else if (values[i]=="Lit"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Literature" + close);}
+					else if (values[i]=="Lit-Other"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Literature-Other" + close);}
+					else if (values[i]=="ArtHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Art History" + close);}
+					else if (values[i]=="ArtHist-Other"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "Art History-Other" + close);}
+					else if (values[i]=="EuroHist"){
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "European History" + close);}
+					else if (values[i]=="EuroHist-Other") {
+					document.getElementById("topic").innerHTML += (open + values[i] + middle + "European History-Other" + close);}
+					}
+
+					// If user has topics that do not appear on list, print them to screen and explain we have no recommendations		
+					else
+					{
+					document.getElementById("notopic").innerHTML = "<p>You expressed interest in: <div class='declared-interests'><#USER field='ResearchTopics'></div></p><p>We are unable to provide a specific collection recommendation for you. Please visit <a href='https://aeon.amphilsoc.org/aeon.dll?Action=10&Form=81'> our User Profile</a> page to select from our list of research topics.</p>"
+						}
+					</script>
+				</body>
