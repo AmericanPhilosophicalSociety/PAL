@@ -14,7 +14,7 @@
     <xsl:for-each select="interest">
       <xsl:result-document method="html" href="include_{@code}.html">
 
-        <h3>The collections most frequently requested from researchers who expressed an interest in <b><xsl:value-of select="@name"/></b> are listed below with links to each collection's finding aid and the number of times each collection has been requested.</h3>
+        <p>The collections most frequently requested from researchers who expressed an interest in <b><xsl:value-of select="@name"/></b> are listed below with links to each collection's finding aid and the number of times each collection has been requested.</p>
         <table class="rec-table">
           <tr>
             <th>Collection</th>
